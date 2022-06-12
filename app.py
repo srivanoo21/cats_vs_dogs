@@ -36,8 +36,8 @@ def predictRoute():
     result = clApp.classifier.predictiondogcat()
     return jsonify(result)
 
-
+clApp = ClientApp()
 if __name__ == "__main__":
-    clApp = ClientApp()
     #app.run(host='0.0.0.0', port=port)
-    app.run(host='127.0.0.1', port=8000, debug=True)
+    #app.run(host='127.0.0.1', port=8000, debug=True) uncomment this when running in local
+    app.run(debug=True)
